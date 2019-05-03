@@ -53,4 +53,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 minikube addons enable ingress
 # 以下でk8sディレクトリに入っている設定ファイルを用いて色々起動
 kubectl apply -f k8s
+minikube ip
+> 000.111.222.333
 ```
+そして, Chromeで`000.111.222.333`を開く.
