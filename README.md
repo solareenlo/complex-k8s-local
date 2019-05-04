@@ -51,6 +51,8 @@ git cd complex-k8s-local
 # 以下でingress-nginxをダウンロード
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
 minikube addons enable ingress
+# Postgresへのアクセスを許可するパスワードを`solareenlo`と適当に設定する
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=solareenlo
 # 以下でk8sディレクトリに入っている設定ファイルを用いて色々起動
 kubectl apply -f k8s
 minikube ip
